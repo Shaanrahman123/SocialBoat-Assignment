@@ -12,16 +12,14 @@ export default function Header({ setSearchQuery, inputRef }) {
     };
 
     return (
-        <header>
-            <div className="header-container">
-                <img src={logo} alt="Logo" />
-                <div><input type="text" ref={inputRef} placeholder="Search..." onChange={handleSearch} /></div>
-                <Avatar
-                    alt="Remy Sharp"
-                    src={shaan}
-                    sx={{ width: 46, height: 46, border: "2px solid #fff" }}
-                />
-            </div>
+        <header className="header-container">
+            <img src={logo} alt="Logo" />
+            <input type="text" ref={inputRef} placeholder="Search..." onChange={handleSearch} />
+            <Avatar
+                alt="Remy Sharp"
+                src={shaan}
+                sx={{ width: 46, height: 46, border: "2px solid #fff" }}
+            />
         </header>
     );
 }

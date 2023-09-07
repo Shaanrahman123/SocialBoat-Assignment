@@ -4,6 +4,8 @@ import Results from "./components/Results";
 import axios from "axios";
 import Home from "./components/Home";
 import debounce from "lodash/debounce";
+import errorImg from "./img/error.png";
+import "./App.css";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -11,10 +13,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const inputRef = useRef(null); // Create a ref for the input field
-
+  const inputRef = useRef(null);
   const focusInput = () => {
-    // Function to focus on the input field
     inputRef.current.focus();
   };
 
@@ -63,7 +63,7 @@ function App() {
     <div className="App">
       <Header setSearchQuery={setSearchQuery} inputRef={inputRef} />
       {loading && <div id="preloader"></div>}
-      {error && <p>{error}</p>}
+      {error && <div className="error-img"> <img src={errorImg} alt="img" /></div>}
       {!loading && !error && (searchQuery !== "" ? <Results searchResults={searchResults} /> : <Home focusInput={focusInput} />)}
     </div>
   );
