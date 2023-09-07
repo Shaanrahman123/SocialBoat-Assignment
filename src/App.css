@@ -50,17 +50,8 @@ input[type="text"]:focus {
 
 /*888888888888888888888888888  results page  888888888888888888888888888888*/
 
-.container h1 {
-  margin: 50px 0px 40px 20px;
-}
-
-.result-heading {
-  font-size: 2vw;
-  /* color: ; */
-}
-
-.result-box {
-  margin: 30px 0px;
+.container {
+  margin: 50px 0px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -463,15 +454,6 @@ footer .icon-box:hover {
   footer {
     margin-top: 220px;
 
-  }
-
-  .result-heading {
-    font-size: 4vw;
-    /* color: ; */
-  }
-
-  .container h1 {
-    margin: 30px 0px 5px 30px;
   }
 
 }
