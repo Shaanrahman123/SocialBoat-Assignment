@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #e9e9e9;
+
+}
+
+
+
+/*88888888888888888  header page design  888888888888888888888888888888*/
+
+.header-container {
+  padding: 20px 20px;
+  background-color: purple;
+  /* background-color: transparent; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px 10px;
+  max-width: 400px;
+  border-radius: 50px;
+  border: none;
+  outline: 2px solid white;
+  outline-offset: 5px;
+  transition: all 0.2s ease-in;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus {
+  outline-offset: 0px;
+}
+
+
+::placeholder {
+  color: purple;
+  font-weight: 700;
+}
+
+
+
+/*888888888888888888888888888  results page  888888888888888888888888888888*/
+
+.container {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-card {
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.video-box {
+  padding: 10px;
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.content h3 {
+  font-size: 1.7rem;
+}
+
+
+.tag-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tag-box p {
+  background-color: purple;
+  color: white;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+
+
+
+
+/*888888888888888888888888888 home page design 8888888888888888888888888888888888 */
+
+.banner-background {
+  /* width: 100%; */
+  position: relative;
+  height: 84.8vh;
+
+}
+
+.banner-background img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  object-fit: cover;
+}
+
+
+
+
+.inner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+
+.textanimation {
+  font-size: 8rem;
+  color: white;
+  font-weight: 700;
+  white-space: nowrap;
+
+}
+
+
+
+
+.search-button {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 12px 22px;
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.play-icon {
+  width: 2em !important;
+  height: 2em !important;
+  animation: icon 2s infinite ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: purple;
+}
+
+@keyframes icon {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@media(max-width:480px) {
+  input[type="text"] {
+    width: 170px;
+  }
+
+  .textanimation {
+    font-size: 2.5rem;
+  }
+
+  .search-button {
+    padding: 4px 9px;
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+.search-button:hover {
+  background-color: purple;
+
+}
+
+.search-button:hover .play-icon {
+  color: white;
+
+}
+
+
+
+
+
+/* 88888888888888888888888888  preloader style 8888888888888888888888888888888888888 */
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #ccc;
+  border-top-color: purple;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 88888888888888888888888888  preloader style 8888888888888888888888888888888888888 */
