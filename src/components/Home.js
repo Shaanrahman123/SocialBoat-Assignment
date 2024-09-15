@@ -20,7 +20,7 @@ const Home = ({ focusInput }) => {
                 <div className="inner-content">
                     <TypeAnimation
                         sequence={[
-                            'BE STRONG',
+                            'BE shaan',
                             1000,
                             'BE FIT',
                             1000,
